@@ -1,0 +1,1836 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:fb="http://ogp.me/ns/fb#">
+
+<head>
+	<script type="text/javascript">
+		try {
+			if(self.location.href != top.location.href) { 
+				top.location = self.location; 
+			} 
+		} catch ( ex ) {
+			// if we cannot access the top.location.href property then we are not in the top-frame, so reload till we are
+			top.location = self.location;
+		}
+	</script>
+	
+		<meta name="description" content="Zeoldcraft's home page. Join us, we are a growing gaming community focused on a friendly user base and home hosting!" >
+<meta name="keywords" content="" >
+<meta name="robots" content="INDEX, FOLLOW" >
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" ><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VgYAWVVaGwoIVlhSDw=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),u=c.length,f=i(a,o,r),d=0;u>d;d++)c[d].apply(f,n);return f}function a(t,e){u[t]=s(t).concat(e)}function s(t){return u[t]||[]}function c(){return n(e)}var u={};return{on:a,emit:e,create:c,listeners:s,_events:u}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(u){try{r("ierr",[u,(new Date).getTime(),!0])}catch(f){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(4),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(u){"stack"in u&&(t(5),t(3),"addEventListener"in window&&t(1),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(2),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:4,2:7,3:5,4:19,5:6,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:19,2:20,ee:"QJf3ax",gos:"7eSDFh"}],5:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:20,2:19,ee:"QJf3ax"}],6:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:20,2:19,ee:"QJf3ax"}],7:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),u=s(a),f=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new f(t);try{i.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",[r])}catch(o){}}return e},window.XMLHttpRequest.prototype=f.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:4,2:20,ee:"QJf3ax"}],8:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,u="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,f=e(u);if(f&&(r.rxSize=f),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,u=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var u=e(o);u&&(r.txSize=u)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",[e])}catch(r){}}};for(var f=0;c>f;f++)n.addEventListener(s[f],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:9,3:7,4:4,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],9:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=l.info=NREUM.info;if(t&&t.licenseKey&&t.applicationID&&u&&u.body){s(h,function(e,n){e in t||(t[e]=n)}),l.proto="https"===p.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=u.createElement("script");e.src=l.proto+t.agent,u.body.appendChild(e)}}function r(){"complete"===u.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,u=c.document,f="addEventListener",d="attachEvent",p=(""+location).split("?")[0],h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-515.min.js"},l=e.exports={offset:i(),origin:p,features:{}};u[f]?(u[f]("DOMContentLoaded",o,!1),c[f]("load",n,!1)):(u[d]("onreadystatechange",r),c[d]("onload",n)),a("mark",["firstbyte",i()])},{1:18,handle:"D5DuLP"}],18:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],19:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],20:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,u;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){f([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return u=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,u],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,u(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,u="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,u?s+o:o,i,s,t))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){f([o,e,n,r])}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){f([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function f(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:19,ee:"QJf3ax"}]},{},["G9z0Bl",3,8]);</script>
+<meta http-equiv="Content-Language" content="en-US" ><title>Home - Zeoldcraft Gaming Community</title>		
+<!--OpenGraph Protocol-->
+<meta property="og:title" content="Zeoldcraft Gaming Community" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://www.zeoldcraft.com" />
+<meta property="og:image" content="http://files.enjin.com.s3.amazonaws.com/246039/site_logo/avatar.png" />
+<meta property="og:description" content="The best minecraft server and FTB Unleashed server!" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content="Zeoldcraft" />
+
+	
+				
+				
+			
+	<link href="/" rel="canonical" >
+<link href="http://resources.guild-hosting.net/201503121250/themes/core/js/library/markitup/skins/enjin/style.css" media="screen" rel="stylesheet" type="text/css" >
+<link href="http://resources.guild-hosting.net/201503121250/themes/core/css/module.minecraftserver.css" media="screen" rel="stylesheet" type="text/css" >
+<link href="http://resources.guild-hosting.net/201503121250/themes/v2/css/mentions.input.css" media="screen" rel="stylesheet" type="text/css" >
+<link href="http://zeoldcraft.com/assets/201503121250/themes/core/css/core.css" media="screen" rel="stylesheet" type="text/css" >
+<link href="http://resources.guild-hosting.net/201503121250/themes/core/css/bbcode.css" media="screen" rel="stylesheet" type="text/css" >
+<link href="http://resources.guild-hosting.net/201503121250/themes/core/css/styles.css" media="screen" rel="stylesheet" type="text/css" >
+<link href="http://resources.guild-hosting.net/201503121250/themes/v2/css/system/user_tray.css" media="screen" rel="stylesheet" type="text/css" >
+<link href="http://resources.guild-hosting.net/201503121250/admin/theme/css/teamspeak/tree.css" media="screen" rel="stylesheet" type="text/css" >
+<link href="http://resources.guild-hosting.net/201503121250/themes/core/css/modules/mumble.css" media="screen" rel="stylesheet" type="text/css" >
+<link href="http://zeoldcraft.com/assets/201503121250/merged/default_fonts.css" media="screen" rel="stylesheet" type="text/css" >
+<link href="http://zeoldcraft.com/assets/201503121250/themes/core/css/theme.php?theme=238817&amp;cache=201503121250-1377030380" media="screen" rel="stylesheet" type="text/css" >
+<link href="http://resources.guild-hosting.net/201503121250/themes/core/css/widthbugfix.css" media="screen" rel="stylesheet" type="text/css" >	<style type="text/css" media="screen">
+<!--
+
+-->
+</style>
+<style type="text/css" media="screen">
+<!--
+a.tag-regular,span.tag-regular{} a.tag-admin,span.tag-admin{} a.tag-untagged,span.tag-untagged{} a.tag-banned,span.tag-banned{} a.tag-online,span.tag-online{} a.tag-ts3online,span.tag-ts3online{} a.tag-minecraft_online,span.tag-minecraft_online{} a.tag-warned,span.tag-warned{} a.tag-punished,span.tag-punished{} a.tag-687395,span.tag-687395{} a.tag-611911,span.tag-611911{} a.tag-342632,span.tag-342632{} a.tag-382949,span.tag-382949{color: #28ced4 !important;} a.tag-301032,span.tag-301032{color: #33d11b !important;} a.tag-608364,span.tag-608364{color: #de7214 !important;} a.tag-345895,span.tag-345895{color: #dfe609 !important;} a.tag-608369,span.tag-608369{color: #05991b !important;} a.tag-301033,span.tag-301033{color: #069e2f !important;} a.tag-608372,span.tag-608372{color: #edcf0c !important;} a.tag-345896,span.tag-345896{color: #fa8405 !important;} a.tag-618626,span.tag-618626{color: #08cad1 !important;} a.tag-300267,span.tag-300267{color: #3d69bf !important;} a.tag-618629,span.tag-618629{color: #85051f !important;} a.tag-353034,span.tag-353034{color: #616161 !important;} a.tag-352137,span.tag-352137{color: #c20bc2 !important;} a.tag-618631,span.tag-618631{color: #b57a32 !important;} a.tag-300701,span.tag-300701{color: #fa0505 !important;} 
+-->
+</style>	<script type="text/javascript" src="http://resources.guild-hosting.net/201503121250/merged/default_layout.js"></script>
+<script type="text/javascript" src="http://resources.guild-hosting.net/201503121250/themes/core/js/core.js"></script>
+<script type="text/javascript" src="http://resources.guild-hosting.net/201503121250/themes/core/js/library/markitup/jquery.markitup.js"></script>
+<script type="text/javascript" src="http://resources.guild-hosting.net/201503121250/themes/core/js/library/markitup/sets/bbcode/set.js"></script>
+<script type="text/javascript" src="http://resources.guild-hosting.net/201503121250/themes/core/js/library/jquery.sparkline.min.js"></script>
+<script type="text/javascript" src="http://resources.guild-hosting.net/201503121250/themes/core/js/modules/minecraft-server.js"></script>
+<script type="text/javascript" src="http://resources.guild-hosting.net/201503121250/themes/core/js/modules/membersonline.js"></script>
+<script type="text/javascript">
+    //<!--
+    $(document).ready(function() {
+	new Module_MembersOnline(7154332, 1);	
+});
+    //-->
+</script>
+<script type="text/javascript" src="http://resources.guild-hosting.net/201503121250/themes/v2/js/lib/underscore.js"></script>
+<script type="text/javascript" src="http://resources.guild-hosting.net/201503121250/themes/v2/js/lib/mentions.input.js"></script>
+<script type="text/javascript" src="http://resources.guild-hosting.net/201503121250/themes/v2/js/lib/caret.position.js"></script>
+<script type="text/javascript" src="http://resources.guild-hosting.net/201503121250/themes/core/js/modules/news.js"></script>
+<script type="text/javascript" src="http://resources.guild-hosting.net/201503121250/themes/core/js/modules/showcase.js"></script>
+<script type="text/javascript" src="http://resources.guild-hosting.net/201503121250/themes/core/js/modules/twitterfeed.js"></script>
+<script type="text/javascript" src="http://resources.guild-hosting.net/201503121250/themes/core/js/library/phpjs.js"></script>
+<script type="text/javascript" src="http://resources.guild-hosting.net/201503121250/themes/core/js/library/date.js"></script>
+<script type="text/javascript">
+    //<!--
+    $(document).ready(function()
+{
+	var twitter = new Enjin_TwitterFeed( {"preset_id":"8142178","screen_name":"@jb_aero","tweets_per_page":"5","hide_paging":"0","user":false,"feed":false} );
+});
+    //-->
+</script>
+<script type="text/javascript">
+    //<!--
+    
+    var current_session_user_id = 0;
+    Enjin_Core.site_id = 246039;
+
+        //-->
+</script>
+<script type="text/javascript">
+    //<!--
+    		var notification_count = {
+					};
+		$(document).ready(function(){
+					});
+	    //-->
+</script>
+	
+    <!-- Universal Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        // enjin tracking
+        ga('create', 'UA-6028401-5', 'auto');
+        ga('send', 'pageview');
+
+                // user website tracking
+        ga('create', 'UA-39577821-1', {
+            'name': 'newTracker'
+            // 'cookieDomain': 'none' // Remove comment if testing from local server
+        });
+
+        // set page_id dimension
+        var dimensionValue = 'page_id';
+        ga('set', 'dimension1', dimensionValue);
+
+        // send pageview
+        ga('newTracker.send', 'pageview', {
+            'dimension1': '2123194'
+        });
+            </script>
+        
+</head>
+
+<body class=" dark-theme"
+      data-dnsme-update-flag="">
+
+
+
+
+
+
+<div class="body-wrap-2"><div class="body-wrap-3">
+
+<div id="page">
+	<div class="page-outer-left"><!--  --></div>
+	<div class="page-outer-right"><!--  --></div>
+	<div id="page-wrap">
+		<div id="above-site"><!--  --></div>
+		<div id="site-body">
+
+			<div><table class="section-collection"><tr class="top">
+			<td class="section-border"><div class="decorator-box"></div></td>
+				<td id="section-header"
+		class="section-holder section-width-large"
+		style=""
+		data-width="1030"
+	>
+		<div class="section">
+<div id='enjin-bar'>
+
+	<div class='right'>
+
+		
+			<!-- Login / Register -->
+			<a href="/login" rel="nofollow">Login</a>
+			
+		
+	</div>
+
+	<div class='left'>
+
+		<!-- Site name -->
+					<a href='/'>Zeoldcraft</a>
+		
+		<!-- Voice -->
+		
+		<!-- Site info -->
+		
+		<!-- Admin dropdown / Upgrade site -->
+		
+		<!-- Social -->
+					<div id='enjin-bar-likes'>
+
+				<!-- Enjin forums / All other websites -->
+				<span class="fb-like-site"><fb:like href="http://www.facebook.com/%3Fsk%3Dwelcome%23%21/pages/Zeoldcraft/340341172675769" send="false" layout="button_count" width="100" show_faces="false"></fb:like></span><a href="https://twitter.com/@jb_aero" class="twitter-follow-button" data-show-count="true"></a>						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+					
+				<!-- Site likes -->
+				
+			</div>
+		
+	</div>
+</div>		      <div class="container_spacer first">
+		        <div class="left"><!--  --></div>
+		        <div class="right"><!--  --></div>
+		      </div><div class='clearing'><!--  --></div>
+
+				<div class="special_container first"><div class='m_html' style='padding: 0px; margin-bottom: -1px;'><style type="text/css"></style><script type="text/javascript"></script><noscript><p>Please enable JavaScript for full functionality.</p></noscript>
+
+<style type="text/css">
+
+.element_progressbar .clabel {
+    text-shadow: 0px 1px 2px #000000;
+}
+
+a {
+    text-shadow: 0px 1px 2px #000000;
+    filter: dropshadow(color=#000000, offx=0, offy=1);
+}
+
+a:hover {
+    text-shadow: 0px 1px 2px #000000;
+    filter: dropshadow(color=#000000, offx=0, offy=1);
+}
+
+a:active {
+    text-shadow: 0px 1px 2px #000000;
+    filter: dropshadow(color=#000000, offx=0, offy=1);
+}
+
+.mainalert {
+  z-index: 100;
+  position: absolute;
+  top: 1px;
+  margin-left: 600px;
+}
+/*
+.secretcode {
+  z-index: 100;
+  position: absolute;
+  top: 215px;
+  left: 635px;
+  width: 133px;
+  height: 25px;
+  background:url(http://files.enjin.com/246039/RedTheme/Plaster.png);
+}
+*/
+
+ul#menu {
+  z-index: 100
+  position: absolute;
+  width: 200px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0px;
+  background-color: #000000
+}
+
+ul#menu ol {
+  z-index: 100;
+  position: relative;
+  display: none;
+  list-style-type: none;
+  padding-left: none !important;
+}
+
+/* IF NEW ALERT, USE THIS CODE. (RED COLORS) */
+/*
+ul#menu li {
+  padding: 5px;
+  background-color: #000000;
+  border-bottom: solid 1px #cc4b4b;
+}
+
+ul#menu li, ul#menu a {
+  font-family: verdana, sans-serif;
+  font-size: 11px;
+  color: #cc4b4b;
+}
+*\
+/* REMOVE COMMENT MARKS ABOVE THIS LINE HERE */
+
+
+/* IF OLD ALERT, USE THIS CODE. (YELLOW COLORS) */
+
+ul#menu li {
+  padding: 5px;
+  background-color: #000000;
+  border-bottom: solid 1px yellow;
+}
+
+ul#menu li, ul#menu a {
+  font-family: verdana, sans-serif;
+  font-size: 11px;
+  color: yellow;
+}
+
+/*REMOVE COMMENT MARKS ABOVE THIS LINE HERE*/
+
+ul#menu ol li {
+  border-bottom: none;
+}
+
+ul#menu a {
+  text-decoration: none;
+  outline: none;
+}
+
+ul#menu a:hover {
+  color: #be5028;
+}
+
+ul#menu a.active {
+  color: #be5028;
+}
+
+.socialmenu {
+    z-index: 100;
+    position: relative;
+    top: 313px;
+    left: 877px;
+    width: auto;
+    height: auto;
+}
+
+.twitchonoff {
+    z-index: 100;
+    position: relative;
+    top: 288px;
+    left: 875px;
+    height: 23px;
+    width: 108px;
+    background:url(http://files.enjin.com/246039/RedTheme/twitch_bg_main);
+}
+
+.socialmenu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px;
+}
+
+.socialmenu li {
+    float: left;
+    margin-right: 10px;
+    display: inline;
+}
+
+.twitch {
+    background:url(http://files.enjin.com/246039/RedTheme/twitch_no_hover.png);
+    height: 32px;
+    width: 32px;
+}
+
+.twitch:hover {
+    background:url(http://files.enjin.com/246039/RedTheme/twitch_hover.png);
+    height: 32px;
+    width: 32px;
+}
+
+.mode {
+    padding: 3px;
+    margin-left: 3px;
+    height: 16px;
+    width: 130px;
+    position: absolute;
+    z-index: 100;
+}
+
+.modetext {
+    position: absolute;
+    left: 25px;
+    bottom: 5px;
+    font-size:10px;
+}
+
+.steam {
+    background:url(http://files.enjin.com/246039/RedTheme/steam_no_hover.png);
+    height: 32px;
+    width: 32px;
+}
+
+.steam:hover {
+    background:url(http://files.enjin.com/246039/RedTheme/steam_hover.png);
+    height: 32px;
+    width: 32px;
+}
+
+.twitter {
+    background:url(http://files.enjin.com/246039/RedTheme/twitter_no_hover.png);
+    height: 32px;
+    width: 32px;
+}
+
+.twitter:hover {
+    background:url(http://files.enjin.com/246039/RedTheme/twitter_hover.png);
+    height: 32px;
+    width: 32px;
+}
+
+.youtube {
+    background:url(http://files.enjin.com/246039/RedTheme/YouTube_no_hover.png);
+    height: 32px;
+    width: 32px;
+}
+
+.youtube:hover {
+    background:url(http://files.enjin.com/246039/RedTheme/YouTube_hover.png);
+    height: 32px;
+    width: 32px;
+}
+
+</style>
+
+<script language="javascript">
+
+/*
+Created by: Travis Beckham :: http://www.squidfingers.com | http://www.podlob.com
+version date: 06/02/03 :: If want to use this code, feel free to do so,
+but please leave this message intact. (Travis Beckham) */
+
+// Node Functions
+
+if(!window.Node){
+  var Node = {ELEMENT_NODE : 1, TEXT_NODE : 3};
+}
+
+function checkNode(node, filter){
+  return (filter == null || node.nodeType == Node[filter] || node.nodeName.toUpperCase() == filter.toUpperCase());
+}
+
+function getChildren(node, filter){
+  var result = new Array();
+  var children = node.childNodes;
+  for(var i = 0; i < children.length; i++){
+    if(checkNode(children[i], filter)) result[result.length] = children[i];
+  }
+  return result;
+}
+
+function getChildrenByElement(node){
+  return getChildren(node, "ELEMENT_NODE");
+}
+
+function getFirstChild(node, filter){
+  var child;
+  var children = node.childNodes;
+  for(var i = 0; i < children.length; i++){
+    child = children[i];
+    if(checkNode(child, filter)) return child;
+  }
+  return null;
+}
+
+function getFirstChildByText(node){
+  return getFirstChild(node, "TEXT_NODE");
+}
+
+function getNextSibling(node, filter){
+  for(var sibling = node.nextSibling; sibling != null; sibling = sibling.nextSibling){
+    if(checkNode(sibling, filter)) return sibling;
+  }
+  return null;
+}
+function getNextSiblingByElement(node){
+        return getNextSibling(node, "ELEMENT_NODE");
+}
+
+// Menu Functions & Properties
+
+var activeMenu = null;
+
+function showMenu() {
+  if(activeMenu){
+    activeMenu.className = "";
+    getNextSiblingByElement(activeMenu).style.display = "none";
+  }
+  if(this == activeMenu){
+    activeMenu = null;
+  } else {
+    this.className = "active";
+    getNextSiblingByElement(this).style.display = "block";
+    activeMenu = this;
+  }
+  return false;
+}
+
+function initMenu(){
+  var menus, menu, text, a, i;
+  menus = getChildrenByElement(document.getElementById("menu"));
+  for(i = 0; i < menus.length; i++){
+    menu = menus[i];
+    text = getFirstChildByText(menu);
+    a = document.createElement("a");
+    menu.replaceChild(a, text);
+    a.appendChild(text);
+    a.href = "#";
+    a.onclick = showMenu;
+    a.onfocus = function(){this.blur()};
+  }
+}
+
+if(document.createElement) window.onload = initMenu;
+
+</script>
+<a href="http://www.zeoldcraft.com/profile/310398"><div class="secretcode"></div></a>
+<div class="mainalert">
+    <ul id="menu">
+        <li>View Latest Alert
+            <ol>
+                <li>
+
+<!--  Edit your Alert Here. Do not remove <p>! -->
+
+<p>We now have a brand new partnered shop! Buy some of your favorite games while supporting us! <a href="http://www.gamefanshop.com/partner-ZeoldCraft/" target="_blank">Please click me</a>.</p>
+
+<!-- Do not edit past this line. -->
+
+                </li>
+            </ol>
+        </li>
+    </ul>
+</div>
+
+<div class="socialmenu">
+    <ul class="socialbuttons">
+        <li> <a href="http://www.twitch.tv/zeoldcraft" target="_blank"><div class="twitch"></div></a> </li>
+        <li> <a href="http://steamcommunity.com/gid/103582791433870829" target="_blank"><div class="steam"></div> </li></a>
+        <li> <a href="https://twitter.com/Zeoldcraft" target="_blank"><div class="twitter"></div> </li></a>
+        <li> <a href="http://www.youtube.com/user/ZeoldcraftCommunity" target="_blank"><div class="youtube"></div> </li></a>
+    </div>
+</div>
+<div class="twitchonoff">
+    <div class="mode">
+        <img src="http://bashtech.net/twitch/status/twitch.php?stream=zeoldcraft" />
+        <div class="modetext">Stream Status</a>
+    </div>
+</div></div></div>
+
+
+				      <div class="container_spacer">
+		        <div class="left"><!--  --></div>
+		        <div class="right"><!--  --></div>
+		      </div><div class='clearing'><!--  --></div>
+
+				<div class="special_container"><div class='m_header'>
+<div class='tl'></div><div class='tr'></div><div class='bl'></div><div class='br'></div>
+
+	<div style="height: 209px" class='holder'>
+		<object wmode="transparent" width="100%" height="209" flashvars="crossdomain=http%3A%2F%2Ffiles.enjin.com.s3.amazonaws.com%2Fcrossdomain.xml&resourcesdomain=http%3A%2F%2Fzeoldcraft.com%2Fassets%2F201503121250%2Fcrossdomain.xml&fontsbaseurl=http%3A%2F%2Fzeoldcraft.com%2Fassets%2F201503121250%2Fheaders%2Ffonts&bgtype=image&bgcolor=0&alignment=center&height=209&numitems=0&bgtransparent=1&bg=http%3A%2F%2Ffiles.enjin.com.s3.amazonaws.com%2F246039%2Fmodule_header%2F12852209%2Fbackground%2Fzeold_mini_motto.png" data="http://resources.guild-hosting.net/201503121250/themes/core/flash/header/v3/EnjinHeader.swf" type="application/x-shockwave-flash">
+			<param name="movie" value="http://resources.guild-hosting.net/201503121250/themes/core/flash/header/v3/EnjinHeader.swf">
+			<param name="wmode" value="transparent">
+			<param name="allowscriptaccess" value="always">
+			<param name="bgcolor" value="#000000">
+			<param name="scale" value="noscale">
+			<param name="flashvars" value="crossdomain=http%3A%2F%2Ffiles.enjin.com.s3.amazonaws.com%2Fcrossdomain.xml&resourcesdomain=http%3A%2F%2Fzeoldcraft.com%2Fassets%2F201503121250%2Fcrossdomain.xml&fontsbaseurl=http%3A%2F%2Fzeoldcraft.com%2Fassets%2F201503121250%2Fheaders%2Ffonts&bgtype=image&bgcolor=0&alignment=center&height=209&numitems=0&bgtransparent=1&bg=http%3A%2F%2Ffiles.enjin.com.s3.amazonaws.com%2F246039%2Fmodule_header%2F12852209%2Fbackground%2Fzeold_mini_motto.png">			
+		</object>
+	</div>
+
+</div></div>
+
+
+				      <div class="container_spacer">
+		        <div class="left"><!--  --></div>
+		        <div class="right"><!--  --></div>
+		      </div><div class='clearing'><!--  --></div>
+
+				<div class="special_container last"><div class='m_hmenu'>
+    <div class='bg left'><!--  --></div>
+    <div class='bg right'><!--  --></div>
+    <div class='buttons content'>
+                    <a href='/home'>
+                <div class='button first'>
+                    <div class='b left'><!--  --></div>
+                    <div class='b right'><!--  --></div>
+                    <div class='b content'>Home</div>
+                </div>
+            </a>
+                                <a href='/forum'>
+                <div class='button'>
+                    <div class='b left'><!--  --></div>
+                    <div class='b right'><!--  --></div>
+                    <div class='b content'>Forums</div>
+                </div>
+            </a>
+                                <a href='/shop'>
+                <div class='button'>
+                    <div class='b left'><!--  --></div>
+                    <div class='b right'><!--  --></div>
+                    <div class='b content'>Server Donations</div>
+                </div>
+            </a>
+                                <a href='/information'>
+                <div class='button'>
+                    <div class='b left'><!--  --></div>
+                    <div class='b right'><!--  --></div>
+                    <div class='b content'>Server Status</div>
+                </div>
+            </a>
+                                <a href='/events'>
+                <div class='button'>
+                    <div class='b left'><!--  --></div>
+                    <div class='b right'><!--  --></div>
+                    <div class='b content'>Events</div>
+                </div>
+            </a>
+                                <a href='/gallery'>
+                <div class='button'>
+                    <div class='b left'><!--  --></div>
+                    <div class='b right'><!--  --></div>
+                    <div class='b content'>Gallery</div>
+                </div>
+            </a>
+                                <a href='http://mystichorizons.com/'>
+                <div class='button'>
+                    <div class='b left'><!--  --></div>
+                    <div class='b right'><!--  --></div>
+                    <div class='b content'>FTB</div>
+                </div>
+            </a>
+                            <div class='cap'><!--  --></div>    </div>
+</div></div>
+
+
+		            		      <div class="container_spacer last">
+		        <div class="left"><!--  --></div>
+		        <div class="right"><!--  --></div>
+		        <div class="middle"><!--  --></div>
+		      </div>
+                        <div class='clearing'><!--  --></div>
+		</div><!-- .section -->
+	</td>
+		<td class="section-border"><div class="decorator-box"></div></td>
+	</tr>
+</table><!-- .section-collection -->
+</div><!-- -->
+	<div><table class="section-collection"><tr class="top">
+			<td class="section-border"><div class="decorator-box"></div></td>
+				<td id="section-left"
+		class="section-holder section-width-small"
+		style="width: 220px;"
+		data-width="220"
+	>
+		<div class="section">		      <div class="container_spacer first">
+		        <div class="left"><!--  --></div>
+		        <div class="right"><!--  --></div>
+		      </div><div class='clearing'><!--  --></div>
+
+									
+					<div class="container with-header first" data-container-id="16475850" data-start-collapsed="0">
+
+                    					  <div class="container_header">
+					    <div class="left"></div>
+					    <div class="right"></div>
+					    					    <div class="title">
+							<span class="mask">
+								<div class="text">
+									<div class="header_text_text">
+										
+                                        Teamspeak                                    </div>
+								</div>
+							</span>
+						</div><!-- .title -->
+					    					  </div>
+                    
+					<div class="container_body">
+														
+                                                      <div class="container_left"><!--  --></div>
+                            <div class="container_right"><!--  --></div>
+                            <div class="container_left_top"><!--  --></div>
+                            <div class="container_right_top"><!--  --></div>
+                            <div class="container_left_bottom"><!--  --></div>
+                            <div class="container_right_bottom"><!--  --></div>
+                         						  
+						  <div class="container_content container-minimized" style="display: none;" >
+						  	Container minimized. <a href="#">Expand</a>
+						  </div>
+					      <div class="container_content container-maximized"  >
+					      	<div class="container_inner_l"></div><div class="container_inner_r"></div><div class="container_inner_tl"></div><div class="container_inner_tr"></div><div class="container_inner_bl"></div><div class="container_inner_br"></div>					          <table class="container_table">
+					            <tr class="container_table_row">
+																				<td class="container_column leftmost rightmost" style="width: 100%">
+										<div class="module module_first module_last">
+										      <div class="module_content">
+										        <div class="module_content_wrap">
+										            	<style type="text/css">
+		.module .ts3-tree.tree-id-41 .ts3-middle {
+			max-height: 380px;
+		}
+	</style>
+
+
+	<div class="ts3-tree ts3-tray tree-id-41">
+		<div class="ts3-top">
+			<img class="ts3-logo" src="http://resources.guild-hosting.net/201503121250/admin/theme/images/teamspeak/ts3logo-small.png" alt="voice">
+			<div class="ts3-top-right">
+				<a class="ts3-title ts3-join-link" href="ts3server://ts3.zeoldcraft.com/">
+					Zeoldcraft				</a>
+				<div class="ts3-server ts3-online">
+					ts3.zeoldcraft.com				</div>
+			</div>
+		</div>
+
+					<div class="ts3-middle">
+				<div class="mask"><div class="row"><img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/server_open.png" alt="icon"> <strong>Zeoldcraft</strong></div></div><div class="mask"><div class="row"><img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_mid.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/channel_open.png" alt="icon"> AFK <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/channel_flag_moderated.png" alt="icon"> </div></div><div class="mask"><div class="row"><img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_mid.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/channel_open.png" alt="icon"> Public Lounge <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/channel_flag_default.png" alt="icon"> </div></div><div class="mask"><div class="row"><div class='spacer' align='left'>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</div></div></div><div class="mask"><div class="row"><img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_mid.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/channel_open.png" alt="icon"> Staff Lounge </div></div><div class="mask"><div class="row"><img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_line.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_mid.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/channel_open.png" alt="icon"> Do Not Disturb </div></div><div class="mask"><div class="row"><img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_line.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_mid.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/channel_open.png" alt="icon"> Staff Meeting </div></div><div class="mask"><div class="row"><img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_line.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_end.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/channel_open.png" alt="icon"> Creative Thinktank </div></div><div class="mask"><div class="row"><img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_line.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_blank.png" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_mid.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/channel_open.png" alt="icon"> Working on FTB </div></div><div class="mask"><div class="row"><img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_line.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_blank.png" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_end.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/channel_open.png" alt="icon"> Working on Main Server </div></div><div class="mask"><div class="row"><div class='spacer' align='left'>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</div></div></div><div class="mask"><div class="row"><img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_mid.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/channel_open.png" alt="icon"> Minecraft </div></div><div class="mask"><div class="row"><img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_line.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_mid.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/channel_open.png" alt="icon"> PvP </div></div><div class="mask"><div class="row"><img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_line.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_mid.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/channel_open.png" alt="icon"> Testing </div></div><div class="mask"><div class="row"><img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_line.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_mid.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/channel_open.png" alt="icon"> Stream Room (General) </div></div><div class="mask"><div class="row"><img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_line.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_line.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_end.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/channel_open.png" alt="icon"> Youtube Recording </div></div><div class="mask"><div class="row"><img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_line.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_end.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/channel_open.png" alt="icon"> FTB (Unleashed) </div></div><div class="mask"><div class="row"><img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_line.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_blank.png" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_mid.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/channel_open.png" alt="icon"> Room 1 </div></div><div class="mask"><div class="row"><img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_line.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_blank.png" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_mid.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/channel_open.png" alt="icon"> Room 2 </div></div><div class="mask"><div class="row"><img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_line.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_blank.png" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_end.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/channel_open.png" alt="icon"> Room 3 </div></div><div class="mask"><div class="row"><div class='spacer' align='left'>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</div></div></div><div class="mask"><div class="row"><img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_mid.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/channel_open.png" alt="icon"> Battlefield 3 </div></div><div class="mask"><div class="row"><img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_line.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_mid.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/channel_open.png" alt="icon"> Room 1 </div></div><div class="mask"><div class="row"><img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_line.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_end.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/channel_open.png" alt="icon"> Room 2 </div></div><div class="mask"><div class="row"><div class='spacer' align='left'>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</div></div></div><div class="mask"><div class="row"><img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_mid.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/channel_open.png" alt="icon"> Arma 2 and 3 </div></div><div class="mask"><div class="row"><img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_line.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_mid.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/channel_open.png" alt="icon"> Room 1 </div></div><div class="mask"><div class="row"><img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_line.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_end.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/channel_open.png" alt="icon"> Room 2 </div></div><div class="mask"><div class="row"><div class='spacer' align='left'>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</div></div></div><div class="mask"><div class="row"><img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_mid.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/channel_open.png" alt="icon"> World of Warcraft </div></div><div class="mask"><div class="row"><img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_line.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_mid.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/channel_open.png" alt="icon"> Room 1 </div></div><div class="mask"><div class="row"><img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_line.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_end.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/channel_open.png" alt="icon"> Room 2 </div></div><div class="mask"><div class="row"><div class='spacer' align='left'>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</div></div></div><div class="mask"><div class="row"><img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_mid.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/channel_open.png" alt="icon"> League of Legends </div></div><div class="mask"><div class="row"><img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_line.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_mid.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/channel_open.png" alt="icon"> Room 1 </div></div><div class="mask"><div class="row"><img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_line.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_end.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/channel_open.png" alt="icon"> Room 2 </div></div><div class="mask"><div class="row"><div class='spacer' align='left'>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</div></div></div><div class="mask"><div class="row"><img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_end.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/channel_open.png" alt="icon"> Other Games </div></div><div class="mask"><div class="row"><img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_blank.png" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_mid.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/channel_open.png" alt="icon"> Room 1 </div></div><div class="mask"><div class="row"><img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_blank.png" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/tree_end.gif" alt="branch"> <img src="http://resources.guild-hosting.net/201503121250/themes/core/images/teamspeak/viewer/channel_open.png" alt="icon"> Room 2 </div></div>			</div>
+		
+		<div class="ts3-bottom-tray">
+			<div class="ts3-bigusers">0 / 10</div>
+			<div class="ts3-bottom-left">
+									<a class="ts3-module-join ts3-join-link" href="ts3server://ts3.zeoldcraft.com">JOIN SERVER</a><br>
+					<span class="ts3-updated">Status updated Dec 27, 14</span>
+							</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+
+
+			<div class="ts3-hidden ts3-unsynced-container">
+			<div class="ts3-top">
+				<img class="ts3-sync-status" title="Your website account is currently unsynced, please follow one of the options below to sync"
+					 src="http://resources.guild-hosting.net/201503121250/admin/theme/images/teamspeak/module/desynced.png">
+				<img class="ts3-logo" src="http://resources.guild-hosting.net/201503121250/admin/theme/images/teamspeak/ts3logo-small.png" alt="voice">
+				<div class="ts3-top-right">
+					<a class="ts3-title ts3-join-link" href="ts3server://ts3.zeoldcraft.com/">
+						Zeoldcraft					</a>
+					<div class="ts3-server ts3-online">
+						ts3.zeoldcraft.com					</div>
+				</div>
+				<div class="ts3-sync-header">
+					Account unsynced - Une one of the following options to sync your site account with your TS3 account:
+				</div>
+			</div>
+			<div class="ts3-sync">
+				<div class="ts3-legend">Option 1 - Click Connect</div>
+				<a class="ts3-connect ts3-join-link" href="ts3server://ts3.zeoldcraft.com/">Connect to Server</a>
+
+				<div class="ts3-legend">Option 2 - Use Privilege Key</div>
+				<input class="ts3-key" type="text" value="" readonly="readonly">
+				<div class="ts3-legend-details">
+					If you already have an account on the TS3 server then connect &amp; input this key in Permissions &gt; Use Privilege Key.
+				</div>
+			</div>
+		</div>
+	    										        </div>
+										      </div><!-- module_content -->
+
+										
+
+										</div><!-- .module -->									</td>
+					            </tr>
+					          </table>
+					      </div><!-- .container_content -->
+					  </div><!-- .container_body -->
+
+                                              <div class="container_footer">
+                            <div class="left"><!--  --></div>
+                            <div class="right"><!--  --></div>
+                                                    </div>
+                      
+					</div><!-- .container -->
+				
+
+
+				      <div class="container_spacer">
+		        <div class="left"><!--  --></div>
+		        <div class="right"><!--  --></div>
+		      </div><div class='clearing'><!--  --></div>
+
+									
+					<div class="container with-header last" data-container-id="10385684" data-start-collapsed="0">
+
+                    					  <div class="container_header">
+					    <div class="left"></div>
+					    <div class="right"></div>
+					    					    <div class="title">
+							<span class="mask">
+								<div class="text">
+									<div class="header_text_text">
+										
+                                        Twitter                                    </div>
+								</div>
+							</span>
+						</div><!-- .title -->
+					    					  </div>
+                    
+					<div class="container_body">
+														
+                                                      <div class="container_left"><!--  --></div>
+                            <div class="container_right"><!--  --></div>
+                            <div class="container_left_top"><!--  --></div>
+                            <div class="container_right_top"><!--  --></div>
+                            <div class="container_left_bottom"><!--  --></div>
+                            <div class="container_right_bottom"><!--  --></div>
+                         						  
+						  <div class="container_content container-minimized" style="display: none;" >
+						  	Container minimized. <a href="#">Expand</a>
+						  </div>
+					      <div class="container_content container-maximized"  >
+					      	<div class="container_inner_l"></div><div class="container_inner_r"></div><div class="container_inner_tl"></div><div class="container_inner_tr"></div><div class="container_inner_bl"></div><div class="container_inner_br"></div>					          <table class="container_table">
+					            <tr class="container_table_row">
+																				<td class="container_column leftmost rightmost" style="width: 100%">
+										<div class="module module_first module_last">
+										      <div class="module_content">
+										        <div class="module_content_wrap">
+										
+
+<div class="m_twitterfeed m_twitterfeed_8142178">
+		<div class="header">
+		<div class="element_avatar simple medium"><a href="#" onclick="return Enjin_TwitterFeed.getInstance(8142178).viewProfile();"><img/></a></div>
+		<div class="user">
+			<div class="screen_name"><a href="#" onclick="return Enjin_TwitterFeed.getInstance(8142178).viewProfile();"></a></div>
+			<div class="followers"><span></span> &middot; <a href="#" onclick="return Enjin_TwitterFeed.getInstance(8142178).follow();">Follow us</a></div>
+		</div>
+	</div>
+	
+	<div class="content">
+		<div class="loading"></div>
+		<div class="item-template">
+			<div class="body"></div>
+			<div class="detail"><span class="time"></span>&nbsp;&middot;&nbsp;<a href="#" onclick="return Enjin_TwitterFeed.getInstance(8142178).reply($(this).closest('.item').attr('data-tweet'))" class="reply">reply</a>&nbsp;&middot;&nbsp;<a href="#" onclick="return Enjin_TwitterFeed.getInstance(8142178).retweet($(this).closest('.item').attr('data-tweet'))" class="retweet">retweet</a></div>
+		</div>
+	</div>
+	
+		<div class="footer">
+		<div class="page"></div>
+		<div class="nav"><span class="prev"><a href="#" onclick="return Enjin_TwitterFeed.getInstance(8142178).prev();">Prev</a></span>&nbsp;&nbsp;<span class="next"><a href="#" onclick="return Enjin_TwitterFeed.getInstance(8142178).next();">Next</a></span></div>
+	</div>
+		</div>
+										        </div>
+										      </div><!-- module_content -->
+
+										
+
+										</div><!-- .module -->									</td>
+					            </tr>
+					          </table>
+					      </div><!-- .container_content -->
+					  </div><!-- .container_body -->
+
+                                              <div class="container_footer">
+                            <div class="left"><!--  --></div>
+                            <div class="right"><!--  --></div>
+                                                    </div>
+                      
+					</div><!-- .container -->
+				
+
+
+		            		      <div class="container_spacer last">
+		        <div class="left"><!--  --></div>
+		        <div class="right"><!--  --></div>
+		        <div class="middle"><!--  --></div>
+		      </div>
+                        <div class='clearing'><!--  --></div>
+		</div><!-- .section -->
+	</td>
+			<td class="section-divider"><div class="decorator-box"></div></td>
+				<td id="section-main"
+		class="section-holder section-width-large"
+		style=""
+		data-width="560"
+	>
+		<div class="section">		      <div class="container_spacer first">
+		        <div class="left"><!--  --></div>
+		        <div class="right"><!--  --></div>
+		      </div><div class='clearing'><!--  --></div>
+
+									
+					<div class="container first" data-container-id="10506887" data-start-collapsed="0">
+
+                    					  <div class="container_header">
+					    <div class="left"></div>
+					    <div class="right"></div>
+					    					  </div>
+                    
+					<div class="container_body">
+														
+                                                      <div class="container_left"><!--  --></div>
+                            <div class="container_right"><!--  --></div>
+                            <div class="container_left_top"><!--  --></div>
+                            <div class="container_right_top"><!--  --></div>
+                            <div class="container_left_bottom"><!--  --></div>
+                            <div class="container_right_bottom"><!--  --></div>
+                         						  
+						  <div class="container_content container-minimized" style="display: none;" >
+						  	Container minimized. <a href="#">Expand</a>
+						  </div>
+					      <div class="container_content container-maximized"  >
+					      	<div class="container_inner_l"></div><div class="container_inner_r"></div><div class="container_inner_tl"></div><div class="container_inner_tr"></div><div class="container_inner_bl"></div><div class="container_inner_br"></div>					          <table class="container_table">
+					            <tr class="container_table_row">
+																				<td class="container_column leftmost rightmost" style="width: 100%">
+										<div class="module module_first module_last">
+										      <div class="module_content">
+										        <div class="module_content_wrap">
+										<!-- start Showcase Module -->
+<div class='m_showcase' id="m_showcase_8238590">
+	<div class="m_showcase_view" style="min-height:250">
+		<div class="m_showcase_img" style="height:250">
+			
+		</div>
+				<a class="m_showcase_prev button" href="javascript:void(0);"></a>
+		<a class="m_showcase_next button" href="javascript:void(0);"></a>
+	</div>
+</div>
+<script>
+	$(document).ready(function() {		Module_Showcase.init(8238590, [{"img":"http:\/\/files-cloud.enjin.com\/246039\/modules\/showcase\/1348764152_716721.jpg","title":"Lind Cathedral","description":"","url":"http:\/\/www.zeoldcraft.com\/gallery","new_window":0},{"img":"http:\/\/files-cloud.enjin.com\/246039\/modules\/showcase\/1374701140_910411.jpg","title":"Sunrise Island Gate","description":"","url":"http:\/\/www.zeoldcraft.com\/gallery","new_window":0},{"img":"http:\/\/files-cloud.enjin.com\/246039\/modules\/showcase\/1377811238_2013-08-25_153146_zps75ace93b.png","title":"Crispen's Shop","description":"","url":"http:\/\/www.zeoldcraft.com\/gallery","new_window":0},{"img":"http:\/\/files-cloud.enjin.com\/246039\/modules\/showcase\/1348764559_1.png","title":"Snowflake","description":"","url":"http:\/\/www.zeoldcraft.com\/gallery","new_window":0},{"img":"http:\/\/files-cloud.enjin.com\/246039\/modules\/showcase\/1374703360_35185616.png","title":"Impossiblru","description":"","url":"http:\/\/www.zeoldcraft.com\/gallery","new_window":0},{"img":"http:\/\/files-cloud.enjin.com\/246039\/modules\/showcase\/1377811186_2013-08-25_143612_zpsb06319dc.png","title":"Phased's New Home","description":"","url":"http:\/\/www.zeoldcraft.com\/gallery","new_window":0},{"img":"http:\/\/files-cloud.enjin.com\/246039\/modules\/showcase\/1374700846_1005076.jpg","title":"Cactopia","description":"","url":"http:\/\/www.zeoldcraft.com\/gallery","new_window":0},{"img":"http:\/\/files-cloud.enjin.com\/246039\/modules\/showcase\/1374704154_2013-04-02_02.00.01.png","title":"Stainglass Chicken","description":"","url":"http:\/\/www.zeoldcraft.com\/gallery","new_window":0},{"img":"http:\/\/files-cloud.enjin.com\/246039\/modules\/showcase\/1377811250_2013-08-25_153331_zps776f3a16.png","title":"The Promised Land!","description":"","url":"http:\/\/www.zeoldcraft.com\/gallery","new_window":0},{"img":"http:\/\/files-cloud.enjin.com\/246039\/modules\/showcase\/1348763882_716719.jpg","title":"Zeold Castle","description":"","url":"http:\/\/www.zeoldcraft.com\/gallery","new_window":0},{"img":"http:\/\/files-cloud.enjin.com\/246039\/modules\/showcase\/1377811269_2013-08-25_155730_zps1422acc0.png","title":"FTB Spawn","description":"","url":"http:\/\/www.zeoldcraft.com\/gallery","new_window":0},{"img":"http:\/\/files-cloud.enjin.com\/246039\/modules\/showcase\/1374704751_2012-12-31_04.09.19.png","title":"Navi Panda","description":"","url":"http:\/\/www.zeoldcraft.com\/gallery","new_window":0},{"img":"http:\/\/files-cloud.enjin.com\/246039\/modules\/showcase\/1348764028_716720.jpg","title":"Lind Church","description":"","url":"http:\/\/www.zeoldcraft.com\/gallery","new_window":0},{"img":"http:\/\/files-cloud.enjin.com\/246039\/modules\/showcase\/1377811216_2013-08-25_152946_zps42b030cb.png","title":"Famous' Home","description":"","url":"http:\/\/www.zeoldcraft.com\/gallery","new_window":0}]);
+		Module_Showcase.Slideshow(
+			"8238590",
+			"250",
+			"slide_fade",
+			"4"
+		);
+	});</script>
+<!-- end Showcase Module -->										        </div>
+										      </div><!-- module_content -->
+
+										
+
+										</div><!-- .module -->									</td>
+					            </tr>
+					          </table>
+					      </div><!-- .container_content -->
+					  </div><!-- .container_body -->
+
+                                              <div class="container_footer">
+                            <div class="left"><!--  --></div>
+                            <div class="right"><!--  --></div>
+                                                    </div>
+                      
+					</div><!-- .container -->
+				
+
+
+				      <div class="container_spacer">
+		        <div class="left"><!--  --></div>
+		        <div class="right"><!--  --></div>
+		      </div><div class='clearing'><!--  --></div>
+
+				<div class="special_container last">	
+<div class='m_news main' data-presetid="7154346" data-url="/home/m/7154346">
+    
+        	<div class="search-box" style="padding-top:12px;padding-bottom:8px;padding-left:16px">
+    	    <div class='input-text search-container'><input type="text" class="search-input"></div><div class='element_button'><div class='l'><!-- --></div><div class='r'><!-- --></div><input type="button" data-url="/home/m/7154346" value="Search"></div>
+    	</div>    	
+        <div class="search-box-border-highlight"></div>
+	  
+		<a href='/home/m/7154346/rss/true' class='float-rss'></a>
+	
+		
+	<div class='article first'>
+		<div class='article-body'>
+			<div class='article-body-content'>
+			    
+						    
+				<div class='heading'>
+				    					    <div  class="element_avatar image medium"><div class="a_tl"></div><div class="a_tr"></div><div class="a_bl"></div><div class="a_br"></div><a  data-minitooltip="jb_aero" data-minitooltip-userid="694305" href="http://site54c5be281cfd3.enjin.com/profile/694305"><img src="http://cravatar.eu/helmavatar/jb_aero/74.png" onerror="this.src='http://resources.guild-hosting.net/201503121250/profile/images/avatar/medium.png';" width="43" height="43"></a></div>										
+					<h2 class='title'  >
+						<a href='/home/m/7154346/article/1939948' rel='bookmark'>New Name and Management!!</a>
+					</h2>
+					
+					<div class='info' >
+						<a href='/profile/694305'  class='element_username admin tag-300701'>jb_aero</a>  posted <span class='date'>Dec 5, 13</span>						
+												    
+						
+					</div>
+				</div>
+
+								<div class="like-buttons">
+					
+									</div>
+				
+				<div class='article-content'>
+				    Hello all! As you may have heard, I don't have time to maintain the server anymore. As such, <span style="font-weight: bold;">the community will now be run by </span><span style="color: rgb(255, 0, 0);">H3Y_GO_OUTSID3<span style="color: rgb(255, 0, 0);"><span style="color: rgb(0, 0, 0);">, </span>Xosimos</span></span>, <span style="color: rgb(255, 0, 0);">Matisme</span>, and <span style="color: rgb(255, 0, 0);">Pal101</span>. They have been working hard to setup a new server of their own design, to try new things while otherwise being a very similar experience. To reflect the changes, it was planned that the name would change to <span style="font-weight: bold; color: rgb(255, 215, 0);">Radiant Horizons</span>. Those of you who play FTB may have noticed their name is changing to <span style="font-weight: bold; color: rgb(255, 99, 71);">Mystic Horizons</span>, and yes, these names were chosen at the same time to match each other. <br><br>You can check out the new websites at <a title="Radiant Horizons" href="http://www.rhorizons.net">rhorizons.net</a> and <a href="http://www.mystichorizons.com" title="Mystic Horizons">mystichorizons.com</a>. Pay attention to Radiant's site as that will tell you when the new server is officially opened.<br><br>Along with the name change, there will be new ranks and new plugins, as well as the revival of some old favorites. We hope that these changes will allow the new managers to make the server an even better experience for you. See you soon!<br>				</div>
+				    
+				
+						
+				
+			  						
+                <div class='article-footer'>
+                				
+				
+    						     
+			                      
+				</div>
+    
+            			    
+			</div>
+		</div>
+	</div><!-- .article -->
+	
+		
+	<div class='article'>
+		<div class='article-body'>
+			<div class='article-body-content'>
+			    
+						    
+				<div class='heading'>
+				    					    <div  class="element_avatar image medium"><div class="a_tl"></div><div class="a_tr"></div><div class="a_bl"></div><div class="a_br"></div><a  data-minitooltip="jb_aero" data-minitooltip-userid="694305" href="http://site54c5be281cfd3.enjin.com/profile/694305"><img src="http://cravatar.eu/helmavatar/jb_aero/74.png" onerror="this.src='http://resources.guild-hosting.net/201503121250/profile/images/avatar/medium.png';" width="43" height="43"></a></div>										
+					<h2 class='title'  >
+						<a href='/home/m/7154346/article/1882645' rel='bookmark'>More 1.7.2 Support</a>
+					</h2>
+					
+					<div class='info' >
+						<a href='/profile/694305'  class='element_username admin tag-300701'>jb_aero</a>  posted <span class='date'>Nov 10, 13</span>						
+												    
+						
+					</div>
+				</div>
+
+								<div class="like-buttons">
+					
+									</div>
+				
+				<div class='article-content'>
+				    In addition to keeping the normal server compatible with the latest clients, we are now hosting a pluginless temp server with all the 1.7 features on our creative slot. You can access this server via "/server zeoldvanilla" or by connecting to 172.zeoldcraft.com . Be aware that beds work, but you can't leave them clientside without rejoining.<br><br>Also since I've been asked this a lot, yes we are aware that chairs don't work. This is because they rely on a plugin that sends spoofed data to clients. Since there is no plugin server for 1.7 yet, there is no way for that plugin to update to be able to send the correct data. Rest assured, they will return as soon as possible.<br>				</div>
+				    
+				
+						
+				
+			  						
+                <div class='article-footer'>
+                				
+				
+    						     
+			                      
+				</div>
+    
+            			    
+			</div>
+		</div>
+	</div><!-- .article -->
+	
+		
+	<div class='article'>
+		<div class='article-body'>
+			<div class='article-body-content'>
+			    
+						    
+				<div class='heading'>
+				    					    <div  class="element_avatar image medium"><div class="a_tl"></div><div class="a_tr"></div><div class="a_bl"></div><div class="a_br"></div><a  data-minitooltip="jb_aero" data-minitooltip-userid="694305" href="http://site54c5be281cfd3.enjin.com/profile/694305"><img src="http://cravatar.eu/helmavatar/jb_aero/74.png" onerror="this.src='http://resources.guild-hosting.net/201503121250/profile/images/avatar/medium.png';" width="43" height="43"></a></div>										
+					<h2 class='title'  >
+						<a href='/home/m/7154346/article/1872103' rel='bookmark'>1.7.2 Support</a>
+					</h2>
+					
+					<div class='info' >
+						<a href='/profile/694305'  class='element_username admin tag-300701'>jb_aero</a>  posted <span class='date'>Nov 6, 13</span>						
+												    
+						
+					</div>
+				</div>
+
+								<div class="like-buttons">
+					
+									</div>
+				
+				<div class='article-content'>
+				    As is the network, we are now running protocol support for 1.7, so that those clients can connect. Of note, Bukkit has not updated to 1.7 yet, so none of the new features are available yet. THERE ARE NO SERVERS WITH PLUGINS WITH SAID FEATURES. The ETA is the same as every update. You guys have been through this many times, you should remember how it works by now.<br>				</div>
+				    
+				
+						
+				
+			  						
+                <div class='article-footer'>
+                				
+				
+    						     
+			                      
+				</div>
+    
+            			    
+			</div>
+		</div>
+	</div><!-- .article -->
+	
+		
+	<div class='article'>
+		<div class='article-body'>
+			<div class='article-body-content'>
+			    
+						    
+				<div class='heading'>
+				    					    <div  class="element_avatar image medium"><div class="a_tl"></div><div class="a_tr"></div><div class="a_bl"></div><div class="a_br"></div><a  data-minitooltip="jb_aero" data-minitooltip-userid="694305" href="http://site54c5be281cfd3.enjin.com/profile/694305"><img src="http://cravatar.eu/helmavatar/jb_aero/74.png" onerror="this.src='http://resources.guild-hosting.net/201503121250/profile/images/avatar/medium.png';" width="43" height="43"></a></div>										
+					<h2 class='title'  >
+						<a href='/home/m/7154346/article/1783016' rel='bookmark'>Updated to 1.6.4</a>
+					</h2>
+					
+					<div class='info' >
+						<a href='/profile/694305'  class='element_username admin tag-300701'>jb_aero</a>  posted <span class='date'>Sep 23, 13</span>						
+												    
+						
+					</div>
+				</div>
+
+								<div class="like-buttons">
+					
+									</div>
+				
+				<div class='article-content'>
+				    that				</div>
+				    
+				
+						
+				
+			  						
+                <div class='article-footer'>
+                				
+				
+    						     
+			                      
+				</div>
+    
+            			    
+			</div>
+		</div>
+	</div><!-- .article -->
+	
+		
+	<div class='article'>
+		<div class='article-body'>
+			<div class='article-body-content'>
+			    
+						    
+				<div class='heading'>
+				    					    <div  class="element_avatar image medium"><div class="a_tl"></div><div class="a_tr"></div><div class="a_bl"></div><div class="a_br"></div><a  data-minitooltip="jerimay" data-minitooltip-userid="4366804" href="http://site54c5be281cfd3.enjin.com/profile/4366804"><img src="http://cravatar.eu/helmavatar/jerimay/74.png" onerror="this.src='http://resources.guild-hosting.net/201503121250/profile/images/avatar/medium.png';" width="43" height="43"></a></div>										
+					<h2 class='title'  >
+						<a href='/home/m/7154346/article/1729316' rel='bookmark'>Check the FTB News tab!</a>
+					</h2>
+					
+					<div class='info' >
+						<a href='/profile/4366804'  class='element_username tag-618631'>jerimay</a>  posted <span class='date'>Aug 29, 13</span>						
+												    
+						
+					</div>
+				</div>
+
+								<div class="like-buttons">
+					
+									</div>
+				
+				<div class='article-content'>
+				    <span style="color: rgb(199, 21, 133); font-size: 14pt;">We now have an FTB News tab separate from this Main server News tab! Be sure and click on the FTB News tab for updated information!</span>				</div>
+				    
+				
+						
+				
+			  						
+                <div class='article-footer'>
+                				
+				
+    						     
+			                      
+				</div>
+    
+            			    
+			</div>
+		</div>
+	</div><!-- .article -->
+	
+		
+	<div class='article'>
+		<div class='article-body'>
+			<div class='article-body-content'>
+			    
+						    
+				<div class='heading'>
+				    					    <div  class="element_avatar image medium"><div class="a_tl"></div><div class="a_tr"></div><div class="a_bl"></div><div class="a_br"></div><a  data-minitooltip="FamousCobain" data-minitooltip-userid="5098998" href="http://site54c5be281cfd3.enjin.com/profile/5098998"><img src="http://cravatar.eu/helmavatar/FamousCobain/74.png" onerror="this.src='http://resources.guild-hosting.net/201503121250/profile/images/avatar/medium.png';" width="43" height="43"></a></div>										
+					<h2 class='title'  >
+						<a href='/home/m/7154346/article/1668882' rel='bookmark'>FTB Unleashed Update!</a>
+					</h2>
+					
+					<div class='info' >
+						<a href='/profile/5098998'  class='element_username tag-301032'>FamousCobain</a>  posted <span class='date'>Aug 3, 13</span>						
+												    
+						
+					</div>
+				</div>
+
+								<div class="like-buttons">
+					
+									</div>
+				
+				<div class='article-content'>
+				    <span style="color: rgb(255, 69, 0); font-weight: bold; font-style: italic; text-decoration: underline; font-size: 14pt;">We are updating FTB Unleashed to 1.1.3.</span> due to it fixes alot of issues they overlooked the last 2 times. In order to join the server, you will need to be on version 1.1.3. of the Unleashed modpack. Hope to see you all back on the server when it's done updating. :)<div><br></div><div><span style="font-weight: bold; font-style: italic; text-decoration: underline; font-size: 18pt; color: rgb(255, 0, 0);">Be sure to remember to re-enable Biomes O' Plenty, Power Converters, Hats, and Hat Stand.</span></div>				</div>
+				    
+				
+						
+				
+			  						
+                <div class='article-footer'>
+                				
+				
+    						     
+			                      
+				</div>
+    
+            			    
+			</div>
+		</div>
+	</div><!-- .article -->
+	
+		
+	<div class='article last'>
+		<div class='article-body'>
+			<div class='article-body-content'>
+			    
+						    
+				<div class='heading'>
+				    					    <div  class="element_avatar image medium"><div class="a_tl"></div><div class="a_tr"></div><div class="a_bl"></div><div class="a_br"></div><a  data-minitooltip="FamousCobain" data-minitooltip-userid="5098998" href="http://site54c5be281cfd3.enjin.com/profile/5098998"><img src="http://cravatar.eu/helmavatar/FamousCobain/74.png" onerror="this.src='http://resources.guild-hosting.net/201503121250/profile/images/avatar/medium.png';" width="43" height="43"></a></div>										
+					<h2 class='title'  >
+						<a href='/home/m/7154346/article/1662243' rel='bookmark'>FTB Modpack Change and Information.</a>
+					</h2>
+					
+					<div class='info' >
+						<a href='/profile/5098998'  class='element_username tag-301032'>FamousCobain</a>  posted <span class='date'>Jul 31, 13</span>						
+												    
+						
+					</div>
+				</div>
+
+								<div class="like-buttons">
+					
+									</div>
+				
+				<div class='article-content'>
+				    FTB has been updated to 1.5.2. but with that update comes a new modpack. All you will need to know about getting onto the server is on this link:&nbsp;<a title="Whitelist" href="http://zeoldcraftftb.enjin.com/whitelist">http://zeoldcraftftb.enjin.com/whitelist</a><div>Hope to see you all soon. Be sure to Download FTB Unleashed version 1.1.2.</div>				</div>
+				    
+				
+						
+				
+			  						
+                <div class='article-footer'>
+                				
+				
+    						     
+			                      
+				</div>
+    
+            			    
+			</div>
+		</div>
+	</div><!-- .article -->
+	
+		
+	    	<div class='entries'>   	
+	
+    		<span class='next'>
+    			    			Newer <span class='arrow'>&raquo;</span>
+    			    		</span>
+    
+    		<span class='previous'>
+    			<a href='/home/m/7154346/page/2'>    			<span class='arrow'>&laquo;</span> Older
+    			</a>    		</span>
+
+
+    		<div class='rss'><a href='/home/m/7154346/rss/true'>Subscribe to RSS</a></div>
+    	</div>
+
+	
+</div></div>
+
+
+		            		      <div class="container_spacer last">
+		        <div class="left"><!--  --></div>
+		        <div class="right"><!--  --></div>
+		        <div class="middle"><!--  --></div>
+		      </div>
+                        <div class='clearing'><!--  --></div>
+		</div><!-- .section -->
+	</td>
+			<td class="section-divider"><div class="decorator-box"></div></td>
+				<td id="section-right"
+		class="section-holder section-width-small"
+		style="width: 250px;"
+		data-width="250"
+	>
+		<div class="section">		      <div class="container_spacer first">
+		        <div class="left"><!--  --></div>
+		        <div class="right"><!--  --></div>
+		      </div><div class='clearing'><!--  --></div>
+
+				<div class="special_container first"><div class='m_html' style='padding: 0px; margin-bottom: -1px;'><style type="text/css"></style><script type="text/javascript"></script><style>
+
+#slideshow {
+    border: 2px solid #000000;
+    position: relative;
+    height: 157px;
+}
+
+#slideshow IMG {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 8;
+}
+
+#slideshow IMG.active {
+    z-index: 10;
+}
+
+#slideshow IMG.last-active {
+    z-index: 9;
+</style>
+
+<!-- Script to make images switch. Comment out with only one image. -->
+
+<script language="javascript">
+
+function slideSwitch() {
+    var $active = $('#slideshow IMG.active');
+
+    if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
+
+    var $next =  $active.next().length ? $active.next()
+        : $('#slideshow IMG:first');
+
+    $active.addClass('last-active');
+        
+    $next.css({opacity: 0.0})
+        .addClass('active')
+        .animate({opacity: 1.0}, 1000, function() {
+            $active.removeClass('active last-active');
+        });
+}
+
+$(function() {
+    setInterval( "slideSwitch()", 7000 );
+});
+
+</script>
+
+<!-- This is where you can add and subtract images. -->
+
+<!-- This is the sample code. Replace sample with your URL. That's it. -->
+
+<!-- Active to false if only one image! -->
+
+<!-- <img src="IMG_URL_HERE" alt="" /> -->
+
+<div id="slideshow">
+  <!--  <img src="http://i.imgur.com/l5gRtyH.png" alt="" class="active" /> -->
+  <!-- <img src="http://i.imgur.com/EwP94oh.png" alt="" /> -->
+  <!-- <img src="http://i.imgur.com/8JuxqXa.png" alt="" /> -->
+    <img src="http://i.imgur.com/hbYNZVA.png" alt=""/>
+    <img src="http://files.enjin.com/246039/RedTheme/FTB-Recruiting.png" alt=""/>
+</div></div></div>
+
+
+				      <div class="container_spacer">
+		        <div class="left"><!--  --></div>
+		        <div class="right"><!--  --></div>
+		      </div><div class='clearing'><!--  --></div>
+
+									
+					<div class="container" data-container-id="9136654" data-start-collapsed="0">
+
+                    					  <div class="container_header">
+					    <div class="left"></div>
+					    <div class="right"></div>
+					    					  </div>
+                    
+					<div class="container_body">
+														
+                                                      <div class="container_left"><!--  --></div>
+                            <div class="container_right"><!--  --></div>
+                            <div class="container_left_top"><!--  --></div>
+                            <div class="container_right_top"><!--  --></div>
+                            <div class="container_left_bottom"><!--  --></div>
+                            <div class="container_right_bottom"><!--  --></div>
+                         						  
+						  <div class="container_content container-minimized" style="display: none;" >
+						  	Container minimized. <a href="#">Expand</a>
+						  </div>
+					      <div class="container_content container-maximized"  >
+					      	<div class="container_inner_l"></div><div class="container_inner_r"></div><div class="container_inner_tl"></div><div class="container_inner_tr"></div><div class="container_inner_bl"></div><div class="container_inner_br"></div>					          <table class="container_table">
+					            <tr class="container_table_row">
+																				<td class="container_column leftmost rightmost" style="width: 100%">
+										<div class="module module_first">
+										      <div class="module_content">
+										        <div class="module_content_wrap">
+										
+<div class='m_login loginform'>
+
+		
+	<form action='' method='post'>
+		<input type='hidden' name='m' value='7154328'>
+		<input type='hidden' name='do' value='login'>
+		
+					<div class='element_button'><div class='l'><!-- --></div><div class='r'><!-- --></div><input type='button' onclick="document.location.href='/login'" value='Login' tabindex='3'></div>
+						</form>
+</div>										        </div>
+										      </div><!-- module_content -->
+
+										
+
+										</div><!-- .module -->
+										<div class="module">
+										      <div class="module_content">
+										        <div class="module_content_wrap">
+										<div class="m_membersonline">
+			<div class="element_smalltitle">
+			<div class="left"><!--  --></div>
+			<div class="right"><!--  --></div>
+			<div class="title"><div class="mask">Online users (1)</div></div>
+		</div>
+		
+		
+	<div class="featured">
+		
+	<div class="user first">
+		<div  class="element_avatar simple small"><a  data-minitooltip="jb_aero" data-minitooltip-userid="694305" href="http://site54c5be281cfd3.enjin.com/profile/694305"><img src="http://cravatar.eu/helmavatar/jb_aero/74.png" onerror="this.src='http://resources.guild-hosting.net/201503121250/profile/images/avatar/small.png';" width="23" height="23"></a></div>		<div class="info">
+			<a href='/profile/694305'  class='element_username admin tag-300701'>jb_aero</a> 			<div class="registered">currently browsing</div>
+		</div>
+		<div class="clearing"><!--  --></div>
+	</div>
+		</div>
+	
+		
+	</div>
+
+										        </div>
+										      </div><!-- module_content -->
+
+										
+
+										</div><!-- .module -->
+										<div class="module module_last">
+										      <div class="module_content">
+										        <div class="module_content_wrap">
+										<div class="m_memberslatest">
+			<div class="element_smalltitle">
+			<div class="left"><!--  --></div>
+			<div class="right"><!--  --></div>
+			<div class="title"><div class="mask">Latest users</div></div>
+		</div>
+		
+	
+		<div class="user first">
+		<div  class="element_avatar simple small"><a  data-minitooltip="KfcFan" data-minitooltip-userid="2784559" href="http://site54c5be281cfd3.enjin.com/profile/2784559"><img src="http://cravatar.eu/helmavatar/KfcFan/74.png" onerror="this.src='http://resources.guild-hosting.net/201503121250/profile/images/avatar/small.png';" width="23" height="23"></a></div>		<div class="info">
+			<a href='/profile/2784559'  class='element_username'>KfcFan</a> 			<div class="registered">joined Dec 8, 13</div>
+		</div>
+	</div>
+		<div class="user">
+		<div  class="element_avatar simple small"><a  data-minitooltip="Darkesthour61" data-minitooltip-userid="8089036" href="http://site54c5be281cfd3.enjin.com/profile/8089036"><img src="http://assets-cloud.enjin.com/users/8089036/avatar/small.1400127627.png" onerror="this.src='http://resources.guild-hosting.net/201503121250/profile/images/avatar/small.png';" width="23" height="23"></a></div>		<div class="info">
+			<a href='/profile/8089036'  class='element_username'>Darkesthour61</a> 			<div class="registered">joined Dec 7, 13</div>
+		</div>
+	</div>
+		<div class="user">
+		<div  class="element_avatar simple small"><a  data-minitooltip="roniyo" data-minitooltip-userid="8058778" href="http://site54c5be281cfd3.enjin.com/profile/8058778"><img src="http://files.enjin.com.s3.amazonaws.com/246039/site_logo/small.png" onerror="this.src='http://resources.guild-hosting.net/201503121250/profile/images/avatar/small.png';" width="23" height="23"></a></div>		<div class="info">
+			<a href='/profile/8058778'  class='element_username'>roniyo</a> 			<div class="registered">joined Dec 4, 13</div>
+		</div>
+	</div>
+	</div>										        </div>
+										      </div><!-- module_content -->
+
+										
+
+										</div><!-- .module -->									</td>
+					            </tr>
+					          </table>
+					      </div><!-- .container_content -->
+					  </div><!-- .container_body -->
+
+                                              <div class="container_footer">
+                            <div class="left"><!--  --></div>
+                            <div class="right"><!--  --></div>
+                                                    </div>
+                      
+					</div><!-- .container -->
+				
+
+
+				      <div class="container_spacer">
+		        <div class="left"><!--  --></div>
+		        <div class="right"><!--  --></div>
+		      </div><div class='clearing'><!--  --></div>
+
+									
+					<div class="container with-header" data-container-id="9159734" data-start-collapsed="0">
+
+                    					  <div class="container_header">
+					    <div class="left"></div>
+					    <div class="right"></div>
+					    					    <div class="title">
+							<span class="mask">
+								<div class="text">
+									<div class="header_text_text">
+										
+                                        Lastest Threads                                    </div>
+								</div>
+							</span>
+						</div><!-- .title -->
+					    					  </div>
+                    
+					<div class="container_body">
+														
+                                                      <div class="container_left"><!--  --></div>
+                            <div class="container_right"><!--  --></div>
+                            <div class="container_left_top"><!--  --></div>
+                            <div class="container_right_top"><!--  --></div>
+                            <div class="container_left_bottom"><!--  --></div>
+                            <div class="container_right_bottom"><!--  --></div>
+                         						  
+						  <div class="container_content container-minimized" style="display: none;" >
+						  	Container minimized. <a href="#">Expand</a>
+						  </div>
+					      <div class="container_content container-maximized"  >
+					      	<div class="container_inner_l"></div><div class="container_inner_r"></div><div class="container_inner_tl"></div><div class="container_inner_tr"></div><div class="container_inner_bl"></div><div class="container_inner_br"></div>					          <table class="container_table">
+					            <tr class="container_table_row">
+																				<td class="container_column leftmost rightmost" style="width: 100%">
+										<div class="module module_first module_last">
+										      <div class="module_content">
+										        <div class="module_content_wrap">
+										<div class="m_forumlatestthreads">
+                <div class="thread thread_first">
+                                                        <div  class="element_avatar simple small"><a  data-minitooltip="Suprem20" data-minitooltip-userid="691497" href="http://site54c5be281cfd3.enjin.com/profile/691497"><img src="http://cravatar.eu/helmavatar/Suprem20/74.png" onerror="this.src='http://resources.guild-hosting.net/201503121250/profile/images/avatar/small.png';" width="23" height="23"></a></div>                
+                <div class="post-info post-info-avatar">
+                    <div class="title"><a href="http://www.zeoldcraft.com/forum/m/7154347/viewthread/4848109-new-map-ideas/post/last#last" class="">New Map Ideas!</a></div>
+                    <div class="info">
+                        Dec 6, 13                                                    <a href='/profile/691497'  class='element_username'>Suprem20</a>                                             </div>
+                                            <a class="forum" href="http://www.zeoldcraft.com/forum/m/7154347/viewforum/1586415">Suggestions</a>
+                                    </div>
+            </div>
+                    <div class="thread">
+                                                        <div  class="element_avatar simple small"><a  data-minitooltip="briancd2" data-minitooltip-userid="3022655" href="http://site54c5be281cfd3.enjin.com/profile/3022655"><img src="http://cravatar.eu/helmavatar/briancd2/74.png" onerror="this.src='http://resources.guild-hosting.net/201503121250/profile/images/avatar/small.png';" width="23" height="23"></a></div>                
+                <div class="post-info post-info-avatar">
+                    <div class="title"><a href="http://www.zeoldcraft.com/forum/m/7154347/viewthread/6076392-report-players-here/post/last#last" class="">Report Players Here</a></div>
+                    <div class="info">
+                        Dec 6, 13                                                    <a href='/profile/3022655'  class='element_username tag-300267'>briancd2</a>                                             </div>
+                                            <a class="forum" href="http://www.zeoldcraft.com/forum/m/7154347/viewforum/1587836">Ban Disputes and Grief Reports</a>
+                                    </div>
+            </div>
+                    <div class="thread">
+                                                        <div  class="element_avatar simple small"><a  data-minitooltip="H3Y_GO_OUTSID3" data-minitooltip-userid="3022464" href="http://site54c5be281cfd3.enjin.com/profile/3022464"><img src="http://cravatar.eu/helmavatar/H3Y_GO_OUTSID3/74.png" onerror="this.src='http://resources.guild-hosting.net/201503121250/profile/images/avatar/small.png';" width="23" height="23"></a></div>                
+                <div class="post-info post-info-avatar">
+                    <div class="title"><a href="http://www.zeoldcraft.com/forum/m/7154347/viewthread/9616371-h3y/post/last#last" class="">H3Y</a></div>
+                    <div class="info">
+                        Nov 22, 13                                                    <a href='/profile/3022464'  class='element_username tag-300701'>H3Y_GO_OUTSID3</a>                                             </div>
+                                            <a class="forum" href="http://www.zeoldcraft.com/forum/m/7154347/viewforum/1586414">Blah</a>
+                                    </div>
+            </div>
+                    <div class="thread">
+                                                        <div  class="element_avatar simple small"><a  data-minitooltip="Xosimos" data-minitooltip-userid="936981" href="http://site54c5be281cfd3.enjin.com/profile/936981"><img src="http://cravatar.eu/helmavatar/Xosimos/74.png" onerror="this.src='http://resources.guild-hosting.net/201503121250/profile/images/avatar/small.png';" width="23" height="23"></a></div>                
+                <div class="post-info post-info-avatar">
+                    <div class="title"><a href="http://www.zeoldcraft.com/forum/m/7154347/viewthread/9533360-talking-about-sy-servers/post/last#last" class="">Talking about s****y servers</a></div>
+                    <div class="info">
+                        Nov 15, 13                                                    <a href='/profile/936981'  class='element_username admin tag-352137'>Xosimos</a>                                             </div>
+                                            <a class="forum" href="http://www.zeoldcraft.com/forum/m/7154347/viewforum/1587836">Ban Disputes and Grief Reports</a>
+                                    </div>
+            </div>
+                    <div class="thread thread_last">
+                                                        <div  class="element_avatar simple small"><a  data-minitooltip="NaviSaysHey" data-minitooltip-userid="2572044" href="http://site54c5be281cfd3.enjin.com/profile/2572044"><img src="http://assets-cloud.enjin.com/users/2572044/avatar/characters/5814408/small.png" onerror="this.src='http://resources.guild-hosting.net/201503121250/profile/images/avatar/small.png';" width="23" height="23"></a></div>                
+                <div class="post-info post-info-avatar">
+                    <div class="title"><a href="http://www.zeoldcraft.com/forum/m/7154347/viewthread/9521195-breaking-rules/post/last#last" class="">Breaking Rules</a></div>
+                    <div class="info">
+                        Nov 14, 13                                                    <a href='/profile/2572044'  class='element_username tag-300267'>NaviSaysHey</a>                                             </div>
+                                            <a class="forum" href="http://www.zeoldcraft.com/forum/m/7154347/viewforum/1587836">Ban Disputes and Grief Reports</a>
+                                    </div>
+            </div>
+            </div>
+
+										        </div>
+										      </div><!-- module_content -->
+
+										
+
+										</div><!-- .module -->									</td>
+					            </tr>
+					          </table>
+					      </div><!-- .container_content -->
+					  </div><!-- .container_body -->
+
+                                              <div class="container_footer">
+                            <div class="left"><!--  --></div>
+                            <div class="right"><!--  --></div>
+                                                    </div>
+                      
+					</div><!-- .container -->
+				
+
+
+				      <div class="container_spacer">
+		        <div class="left"><!--  --></div>
+		        <div class="right"><!--  --></div>
+		      </div><div class='clearing'><!--  --></div>
+
+									
+					<div class="container last" data-container-id="11568260" data-start-collapsed="0">
+
+                    					  <div class="container_header">
+					    <div class="left"></div>
+					    <div class="right"></div>
+					    					  </div>
+                    
+					<div class="container_body">
+														
+                                                      <div class="container_left"><!--  --></div>
+                            <div class="container_right"><!--  --></div>
+                            <div class="container_left_top"><!--  --></div>
+                            <div class="container_right_top"><!--  --></div>
+                            <div class="container_left_bottom"><!--  --></div>
+                            <div class="container_right_bottom"><!--  --></div>
+                         						  
+						  <div class="container_content container-minimized" style="display: none;" >
+						  	Container minimized. <a href="#">Expand</a>
+						  </div>
+					      <div class="container_content container-maximized"  >
+					      	<div class="container_inner_l"></div><div class="container_inner_r"></div><div class="container_inner_tl"></div><div class="container_inner_tr"></div><div class="container_inner_bl"></div><div class="container_inner_br"></div>					          <table class="container_table">
+					            <tr class="container_table_row">
+																				<td class="container_column leftmost rightmost" style="width: 100%">
+										<div class="module module_first module_last">
+										      <div class="module_content">
+										        <div class="module_content_wrap">
+										<div class="m_minecraftvoting" data-server_id="">
+<div style='padding: 14px; font-size: 11px;'>Please look <a target="_blank" href="https://support.enjin.com/hc/en-us/articles/200169325-Installing-the-Enjin-MC-Plugin">here</a> for instructions on how to get this module to work correctly.</div></div>										        </div>
+										      </div><!-- module_content -->
+
+										
+
+										</div><!-- .module -->									</td>
+					            </tr>
+					          </table>
+					      </div><!-- .container_content -->
+					  </div><!-- .container_body -->
+
+                                              <div class="container_footer">
+                            <div class="left"><!--  --></div>
+                            <div class="right"><!--  --></div>
+                                                    </div>
+                      
+					</div><!-- .container -->
+				
+
+
+		            		      <div class="container_spacer last">
+		        <div class="left"><!--  --></div>
+		        <div class="right"><!--  --></div>
+		        <div class="middle"><!--  --></div>
+		      </div>
+                        <div class='clearing'><!--  --></div>
+		</div><!-- .section -->
+	</td>
+		<td class="section-border"><div class="decorator-box"></div></td>
+	</tr>
+</table><!-- .section-collection -->
+</div><!-- -->
+	<div><table class="section-collection"><tr class="top">
+			<td class="section-border"><div class="decorator-box"></div></td>
+				<td id="section-footer"
+		class="section-holder section-width-large"
+		style=""
+		data-width="1030"
+	>
+		<div class="section">            		      <div class="container_spacer last">
+		        <div class="left"><!--  --></div>
+		        <div class="right"><!--  --></div>
+		        <div class="middle"><!--  --></div>
+		      </div>
+                        <div class='clearing'><!--  --></div>
+		</div><!-- .section -->
+	</td>
+		<td class="section-border"><div class="decorator-box"></div></td>
+	</tr>
+</table><!-- .section-collection -->
+</div><!-- -->
+	
+
+		</div><!-- #site-body -->
+
+		<div id="page-footer">
+							<div class="left">
+					<a href='http://www.enjin.com/'>
+						Community website					</a>
+					by
+					<a href="http://www.enjin.com/">
+						<img src="http://resources.guild-hosting.net/201503121250/themes/core/images/efooter.png" alt="guild hosting" title="Enjin">
+					</a>
+				</div>
+				<div class="right">
+					&copy; 2015 Enjin
+				</div>
+					</div>
+
+  </div><!-- #page-wrap -->
+</div><!-- #page -->
+
+
+
+
+
+</div></div>
+
+
+
+
+
+
+<div id='global-search-box' class='element_popdown' style='display: none;'><div class='inner'>
+    <form action="/dashboard/search">
+	<div class='search-box-area'><div class='input-text global-search-box-input'><input type="text" name="keywords" style="width:512px" value="Search everything..." /></div><a class="icon"></a></div>
+	<div class='search-results hidden' style="border-top:1px solid #363636; margin-top:4px">
+	   <div class="loading"><center><img src="http://resources.guild-hosting.net/201503121250/themes/core/images/icons/search-loading.gif"></center></div>
+	   <div class="empty hidden">No matches found.</div>
+	   <div class="results hidden">
+	       <ul></ul>
+	       <div class='more'>
+                <div style="display:inline-block"><div class='element_button'><div class='l'><!-- --></div><div class='r'><!-- --></div><input type='submit' value='See more advanced results'></div></div>
+                <div style="display:inline-block;float:right;position:relative;top:11px;right:7px;">Displaying top <span class="count"></span> results</div>
+           </div>
+	   </div>
+	</div>
+</form>
+<div class='tab'><div></div></div></div></div>
+
+
+<script type="text/javascript">
+$(document).ready(function() {	
+	
+	Enjin_Core.Announcements.init([]);
+	Enjin_Core.Reminders.init([]);
+});
+</script>
+<div id="site-announcements">
+	<a href="#">
+		<i class="icon-warning-sign icon"></i>
+		<span class="ann-tray-text"><span class="amount"></span> Notice<span class="plural">s</span></span>
+	</a>
+	<div class="site-announcement">
+		<div class="title-bar">
+			<div class="title ann-title"></div> 
+			<div class="close-wrapper"><a href="#" onclick="Enjin_Core.Announcements.close(true);return false;"><div class="close"></div></a></div>
+		</div>	
+		<div class="content"></div>
+		
+		<div class="nav-bar nav-bar-bottom">
+			<div class="nav">
+				<div class="announcements-nav">
+					<div class="element_button" onclick="Enjin_Core.Announcements.prev();return false;">
+	                    <div class="l"><!-- --></div>
+	                    <div class="r"><!-- --></div>
+	                    <input type="button" value="Prev" onclick="">
+	                </div>
+	                <div class="element_button" onclick="Enjin_Core.Announcements.next();return false;">
+	                    <div class="l"><!-- --></div>
+	                    <div class="r"><!-- --></div>
+	                    <input type="button" value="Next" onclick="">
+	                </div>
+					<div class="title title-bottom">Announcement <span class="index"></span> of <span class="total"></span></div>
+				</div>
+				
+				<div class="element_button btn-delete-ann">
+				    <div class="l"><!-- --></div>
+				    <div class="r"><!-- --></div>
+				    <input type="button" value="Delete Announcement" />
+				</div>
+				<div class="element_button btn-agree-terms">
+				    <div class="l"><!-- --></div>
+				    <div class="r"><!-- --></div>
+				    <input type="button" value="I Agree to the Terms" />
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="border"></div>
+</div>
+
+
+<div id="announcement-popup" class="element_popup element_popup_core element_popup_window warning-issued-popup" style="z-index: 20000; display: none;">
+    <div class="inner window-frame">
+        <div class="popup_window_title">
+        	<span class="title-text"></span>
+        	<div class="close-wrapper btn-delete-ann-x">
+        		<a href="#"><div class="close"></div></a>
+        	</div>
+        </div>
+        <div class="content">	        
+        	<div class="announcement-text">
+	        	
+        	</div>
+        	<div class="controls">
+	        	<div class="element_button prev"><div class="l"><!-- --></div><div class="r"><!-- --></div><input type="button" value="Prev" onclick=""></div>
+		        <div class="element_button next"><div class="l"><!-- --></div><div class="r"><!-- --></div><input type="button" value="Next" onclick=""></div>
+				
+				<div class="title title-bottom"><span class="index">1</span> of <span class="total">4</span> Announcement</div>
+
+	        	<div class="element_button btn-delete-ann"><div class="l"><!-- --></div><div class="r"><!-- --></div><input type="button" value="Delete Announcement"></div>
+		        <div class="element_button btn-agree"><div class="l"><!-- --></div><div class="r"><!-- --></div><input type="button" value=""></div>
+			</div>
+        </div>
+    </div>
+</div>
+<div class="announcement-canvas-separator" style="z-index: 19999;height: 100% !important; display: none;">&nbsp;</div>
+<!-- 0.186s -->
+<!-- pusher part -->
+
+
+<!-- Google recaptcha ajax api -->
+<script type="text/javascript" src="http://www.google.com/recaptcha/api/js/recaptcha_ajax.js"></script>
+<script type="text/javascript">
+    var recaptcha_publickey = '6LeguQUAAAAAALKdLRbGWnUf8094-ijmOSyFhpnj';
+</script>
+
+<!-- Start Quantcast tag -->
+<script type="text/javascript">
+_qoptions={
+qacct:"p-e2f9QTuI7ynec"
+};
+</script>
+<script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script>
+<noscript>
+<img src="http://pixel.quantserve.com/pixel/p-e2f9QTuI7ynec.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/>
+</noscript>
+<!-- End Quantcast tag -->
+
+
+
+<div id="fb-root"></div><script type="text/javascript">
+    //<!--
+    		(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+		    //-->
+</script>
+<script type="text/javascript">
+    //<!--
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");    //-->
+</script><!-- webx03.enjin.com -->
+
+
+
+
+	
+		
+	
+	
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-6.newrelic.com","licenseKey":"b0a6eb3b0a","applicationID":"982908","transactionName":"M11QMURQC0JZW01YXQoXfApEXARdUUJcVXMHTFsKWB5P","queueTime":0,"applicationTime":187,"ttGuid":"","agentToken":"","atts":"HxpTRwxKGEw=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-515.min.js"}</script><script type="text/javascript">
+//<![CDATA[
+(function() {
+var _analytics_scr = document.createElement('script');
+_analytics_scr.type = 'text/javascript'; _analytics_scr.async = true; _analytics_scr.src = '/_Incapsula_Resource?SWJIYLWA=2977d8d74f63d7f8fedbea018b7a1d05&ns=1';
+var _analytics_elem = document.getElementsByTagName('script')[0]; _analytics_elem.parentNode.insertBefore(_analytics_scr, _analytics_elem);
+})();
+// ]]>
+</script></body>
+
+</html>
